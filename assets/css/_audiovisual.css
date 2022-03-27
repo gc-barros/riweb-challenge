@@ -1,0 +1,45 @@
+.audiovisual {
+  background-color: var(--primary-color);
+  padding-bottom: 88px;
+}
+
+.audiovisual__titulo {
+  font-size: 40px;
+  text-align: center;
+  padding: 88px 0 44px 0;
+  color: #FFF;
+  font-weight: 600;
+}
+
+.audiovisual__menu {
+  display: flex;
+  flex-wrap: wrap;
+  color: #FFF;
+  font-size: 18px;
+  gap: 32px;
+}
+
+.audiovisual__menu--item {
+  cursor: pointer;
+  padding: 4px;
+}
+
+.audiovisual__menu--item.ativo, .audiovisual__menu--item:hover {
+  border-bottom: 2px solid #FFF;
+}
+
+.audiovisual__content {
+  max-width: 1260px;
+  margin: auto;
+  padding: 16px;
+}
+
+.audiovisual__midias {
+  margin-top: 32px;
+}
+
+.audiovisual__midias > img {
+  width: 100%;
+  cursor: pointer;
+}
+

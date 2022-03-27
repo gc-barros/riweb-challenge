@@ -1,0 +1,74 @@
+.comunicados {
+  padding: 16px;
+}
+
+.comunicados__titulo {
+  text-align: center;
+  font-size: 40px;
+  color: var(--secundary-color);
+  margin-bottom: 48px;
+  margin-top: 90px;
+}
+
+.comunicados > form {
+  justify-content: center;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.comunicados label {
+  color: #A0A0A0;
+
+}
+
+.comunicados input {
+  display: block;
+  border: 0;
+  margin-top: 8px;
+  border-radius: 27px;
+  height: 53px;
+  width: 370px;
+  outline: 0;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.comunicados button {
+  border-radius: 27px;
+  background-color: #01ADFF;
+  border: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFF;
+  padding: 15px;
+  height: 53px;
+  width: 217px;
+  box-sizing: border-box;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.comunicados button:hover {
+  background-color: #461BFF;
+}
+
+@media screen and (max-width: 1023px) {
+  .comunicados form {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .comunicados button, 
+  .comunicados label {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .comunicados input {
+    width: 100%;
+  }
+}

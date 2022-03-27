@@ -1,0 +1,142 @@
+.noticias {
+  background-image: url("../img/Banner.png");
+  background-repeat: no-repeat;
+  padding-top: 277px;
+  padding-bottom: 88px;
+}
+
+.carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  position: relative;
+  max-width: 1360px;
+  margin: auto;
+  bottom: -2px;
+}
+
+.carrossel__container {
+  display: flex;
+  margin: 0 42px;
+  gap: 36px;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.carrossel__card {
+  max-width: 370px;
+  min-width: 370px;
+  width: 100%;
+  background-color: #FFF;
+  color: #5E5D5D;
+  border-radius: 12px;
+  cursor: pointer;
+  scroll-margin: 40px;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  transition: .4s ease;
+}
+
+.carrossel__card:last-of-type {
+  margin-right: 812px;
+}
+
+.carrossel__card--content {
+  display: flex;
+  flex-direction: column;
+  line-height: 24px;
+  padding: 32px 29px;
+}
+
+.carrossel__card--content > strong {
+  font-weight: bold;
+  color: #01DA96;
+  font-size: 22px;
+  margin: 16px 0 24px 0;
+}
+.carrossel__card--img {
+  width: 100%;
+  height: 175px;
+}
+
+.carrossel__card--img > img {
+  border-radius: 0 0 12px 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrossel__botao--left,
+.carrossel__botao--right {
+  background-color: #FFF;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  height: 46px;
+  width: 46px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.carrossel__botao--left > img {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.botao {
+  display: block;
+  padding: 18px;
+  max-width: 282px;
+  width: 100%;
+  margin: auto;
+  background-color: #6D6E72;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 30px;
+  border: 0;
+  margin-top: 45px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.botao:hover {
+  background-color: #20DEA3;
+}
+
+@media screen and (max-width: 1023px) {
+  .noticias {
+    background-position: -200px top;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .carrossel__botao--left,
+  .carrossel__botao--right {
+    display: none;
+  }
+  
+  .carrossel__container {
+    overflow-x: scroll;
+    margin: 0;
+    gap: 18px;
+  }
+
+  .carrossel__card {
+    min-width: calc(100vw - 94px);
+  }
+
+  .carrossel__card:last-of-type {
+    margin-right: 18px;
+  }
+
+  .carrossel {
+    padding-right: 0;
+  }
+}

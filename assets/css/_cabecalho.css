@@ -1,0 +1,224 @@
+.cabecalho {
+  background-color: var(--primary-color);
+  color: #FFF;
+  font-size: 18px;
+  min-height: 92px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cabecalho__container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1560px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.cabecalho__navegacao {
+  margin: auto;
+}
+
+.cabecalho__logo {
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.cabecalho__menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -6px;
+}
+
+.cabecalho__menu--item:not(.cabecalho__menu--item:last-of-type) {
+  margin-right: 2.5vw;
+}
+
+.cabecalho__menu--item > a {
+  text-decoration: none;
+  display: inline-block;
+  color: #FFF;
+  padding: 4px;
+  letter-spacing: 2px;
+}
+
+.cabecalho__menu--item > a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #FFF;
+  margin-top: 6px;
+  transition: .4s ease all;
+}
+
+.cabecalho__menu--item:hover > a::after {
+  width: 110%;
+}
+
+.cabecalho__icones {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cabecalho__icone:not(.cabecalho__icone:last-of-type) {
+  margin-right: 32px;
+}
+
+.cabecalho__icone > a, .cabecalho__icone > button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  background: url(../img/icons/search.svg) no-repeat center / contain;
+}
+
+.cabecalho__icone:nth-child(2) > button {
+  background-image: url(../img/icons/language.svg);
+}
+
+.cabecalho__icone:nth-child(3) > a {
+  background-image: url(../img/icons/facebook.svg);
+}
+
+.cabecalho__icone:nth-child(4) > a {
+  background-image: url(../img/icons/linkedin.svg);
+}
+
+.cabecalho__icone:nth-child(5) > a {
+  background-image: url(../img/icons/youtube.svg);
+}
+
+.cabecalho__hamburguer {
+  display: none;
+  position: absolute;
+}
+
+.cabecalho__submenu {
+  display: none;
+  position: absolute;
+  bottom: -160px;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  background-color: #FFF;
+  color: #000;
+  font-size: 14px;
+  width: 160px;
+}
+
+.cabecalho__submenu.ativo {
+  display: block;
+}
+
+.cabecalho__submenu > li {
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.cabecalho__submenu > li:hover {
+  text-decoration: underline;
+}
+
+.cabecalho__campo-busca {
+  margin-left: -230px;
+  position: absolute;
+  bottom: -24px;
+  display: none;
+}
+
+.cabecalho__campo-busca.ativo {
+  display: flex;
+}
+
+.cabecalho__campo-busca > input {
+  border-radius: 5px;
+  padding: 10px 16px;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+  height: 42px;
+  font-size: 16px;
+}
+
+.cabecalho__campo-busca > button {
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: #20DEA3;
+  color: #FFF;
+  border: 0;
+  width: 42px;
+  height: 42px;
+  margin-left: -16px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .cabecalho__container {
+    flex-direction: column;
+    padding-top: 48px;
+  }
+
+  .cabecalho__menu {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: -240px;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    height: 100vh;
+    width: 100%;
+    max-width: 200px;
+    padding: 16px;
+    padding-top: 40px;
+    gap: 40px;
+    box-shadow: 1px 1px 10px rgb(78, 54, 145);
+    transition: .6s ease-in-out;
+  }
+
+  .cabecalho__menu.ativo {
+    left: 0;
+  }
+
+  .cabecalho__submenu {
+    position: static;
+    margin-top: 16px;
+  }
+
+  .cabecalho__menu--item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+    width: 100%;
+  }
+
+  .cabecalho__hamburguer {
+    display: block;
+    top: 16px;
+    left: 16px;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    height: 48px;
+    width: 48px;
+  }
+
+  .cabecalho__hamburguer > img {
+    width: 100%;
+  }
+
+  .cabecalho__campo-busca {
+    position: absolute;
+    right: 40px;
+    bottom: -40px;
+  }
+}
